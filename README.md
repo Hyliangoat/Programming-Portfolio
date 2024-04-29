@@ -1,27 +1,13 @@
-# Programming-Portfolio
-All works done throughout SNHU computer science degree
+How do I interpret user needs and implement them into a program? How does creating “user stories” help with this?
 
+  User stories are essentially a break down of these user needs. They are simple to digest, short paragraphs or sentences, that turn the user needs into something of a psuedo code with a "why" at the end. These user stories take the users needs from a vague desire and turn   it into something a programmer or developer can easily understand and implement. They take all of the guesswork out of the desire, and the "why" allows the tester to easily understand how another human being, or the user themselves, would attempt to use this feature.
+  
+How do I approach developing programs? What agile processes do I hope to incorporate into my future development work?
 
-#Summarize the project and what problem it was solving.
+  I personally approach them head-on, starting almost immediately on the text editor to begin creating code through a constant success/failure cycle. In my own way, I feel like this is close to the agile process innately. I tend to do things in short rushes, taking what
+  know to be a smaller feature, aggressively coding in as many possible solutions as I can until one works, learning from those mistakes, then continuing to the next feature. This method is nothing like the waterfall method, something I would be terrible at, that            requires immense amounts of planning and forethought into a project. I do this because knowing how many roadblocks I've faced in the past, the waterfall method has always seemed like a waste of time. Why would I go through so much effort planning when I already know    I will eventually have some sort of coding failure and have to do something akin to agile in order to fix it? I apprecaite what I've learned from agile because of this.
 
-This project was an application for a grocery store that required a program that would allow them to keep track of items purchased in their store. The goal of the program was to allow the user to see what items were purchased (as a whole or individually), how many were purchased, to display a visual histogram for the items, and to write all data to a file for the user.
+  
+What does it mean to be a good team member in software development?
 
-#What did you do particularly well?
-
-I felt I organized my code well and allowed the program to do as much as possible without the user having to do any extra work. For example, the project did not specifically ask for an updateable list that can add or subtract items. The project only asked for the ability to read a very strict list of items. But my program allows the user to add as many possible items to the list and it will add all of them to the total. I feel like my error correction is also pretty good. 
-
-#Where could you enhance your code? How would these improvements make your code more efficient, secure, and so on?
-
-I would like to spend more time on pointers and the like to enhance the optimization of my program.
-
-#Which pieces of the code did you find most challenging to write, and how did you overcome this? What tools or resources are you adding to your support network?
-
-The most challenging parts would probably be the formatting on the C++ side. Things like colored text are not exactly an easy resource to use and understand. I had to search through a variety of different websites with documentation to find one that could suit my needs. The same goes for text formatting on the Python side when it came to writing to files.
-
-#What skills from this project will be particularly transferable to other projects or course work?
-
-This project taught me how to combine two languages together and use the strengths and weaknesses of either one accordingly. I feel that this will be useful in all further coursework when combining languages becomes the commonplace.
-
-#How did you make this program maintainable, readable, and adaptable?
-
-Spacing, comments, and vague decision makers like switches. I kept it as readable as possible while commenting on the vast majority of elements, and I used decision makers like switches so the program can easily be adapted to add or subtract more options.
+  Transparency and an ability to take criticism. A team works best when all members can be constructively vocal about the entire process of the project. When all members know their place, and the places of those around them, and feel like they are able to voice concerns or ask for help, the project will move significantly smoother. In a software development world, there is no place for rigidity and hard coded rules. Teams should flow together like a swarm of bees, constantly working together towards one objective.
