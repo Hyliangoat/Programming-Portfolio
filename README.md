@@ -1,24 +1,15 @@
--Briefly summarize The Gaming Room client and their software requirements. Who was the client? What type of software did they want you to design?
+This project was completed for a simulated client called Artemis Financial. They specialize in creating custom financial plans for clients, including retirement planning, investments, savings, and insurance. The company needed help modernizing their software and improving its security, specifically by adding a file verification step using checksums and securing all web communication using HTTPS. My role was to refactor their existing Spring Boot application to support these new requirements using secure coding practices.
 
-The client was The Gaming Room. They desired a gaming application that could host multiple users from different networks that draw from one single library of images to play a timer-based guessing game.
+One thing I believe I did well during this project was identifying and addressing security vulnerabilities through a systematic approach. I implemented SHA-256 hashing to add checksum functionality and configured the application to support secure HTTPS connections using a self-signed certificate. I also tried to make sure that the hashing logic was original and explained how it worked, instead of just copying a standard example. This helped me understand the importance of implementing security in a way that’s not only functional but also maintainable and customized for the specific application.
 
--What did you do particularly well in developing this documentation?
+Secure coding is extremely important because it helps protect against threats like data breaches and unauthorized access. For a company like Artemis Financial, whose business revolves around sensitive customer data, maintaining security directly impacts their trustworthiness and overall reputation. From a business standpoint, strong software security can reduce the risk of regulatory issues and financial loss, and it builds confidence with clients who rely on them to safeguard their personal information.
 
-I feel like I did particularlt well on my research during this documentation. There were many things I didn't innately know about different server companies, OS specifications, and capabilties that I spent a lot of time researching so that I could consult the client on their desired software specs.
+One part of the vulnerability assessment that was both helpful and challenging was working with OWASP Dependency-Check. It generated a large number of potential issues, which at first was overwhelming. I had to figure out which vulnerabilities actually mattered and which were related to third-party libraries that I wasn't actively using in my changes. This forced me to look deeper into how dependencies are managed in Maven and what counts as a "false positive" in static testing.
 
--What about the process of working through a design document did you find helpful when developing the code?
+To increase security, I added two main features: a checksum verification route using SHA-256 and HTTPS communication by generating and using a self-signed certificate. I also used OWASP Dependency-Check to scan for known vulnerabilities in the project dependencies. In the future, I would continue using Dependency-Check or similar tools like SonarQube or Snyk, and I would also consider doing threat modeling and manual code reviews depending on the size and complexity of the system.
 
-The ordering of the document seemed to flow very well. Starting at the original overview, moving through things like the flowchart and the innate specifications required, then into a compare and contrast chart, finishing at my actual recommendations. Using this type of document and work flow really helped the consulting process flow smoothly.
+To ensure the application was both functional and secure, I tested the /hash endpoint in a browser and made sure it returned the expected checksum output without errors. I ran the app using both HTTP and HTTPS to confirm it worked in both cases, and I double-checked the browser's security indicators. After refactoring, I ran a full Dependency-Check scan again to verify I hadn’t introduced any new security risks.
 
--If you could choose one part of your work on these documents to revise, what would you pick? How would you improve it?
+Tools and practices I found most helpful in this assignment included Spring Boot (for setting up the REST service), the Java Keytool (for generating SSL certificates), and the OWASP Dependency-Check plugin (for static analysis). I also focused on writing clean, well-commented code to make the logic clear and original, which I think helped avoid plagiarism concerns and showed my understanding of the material.
 
-Probably the initial compare and contrast section, now that I know so much more about the systems that I recommended later on in the assigment.
-
--How did you interpret the user’s needs and implement them into your software design? Why is it so important to consider the user’s needs when designing?
-
-I interpreted their needs based on what they actually requested me and a ton of researched information on what operating systems, APIs, and operating concepts work best with that they want. It took a lot of time and effort to make sure they got the best recommendations based on the multi-user server system they were requesting.
-
-
--How did you approach designing software? What techniques or strategies would you use in the future to analyze and design a similar software application?
-
-Initially I approached designing software as a "throw the entire sink at it and fix the problems later" approach, but now I think I'll take a bit more time to plan out and design my process. Knowing what I know now about servers, clouds, and these individual operating systems, I realize there is much more to be gained by pre-planning and doing a bit more research before starting the devoloping process.
+If I were showing this project to a future employer, I would highlight the secure REST endpoint that I built, the SSL configuration steps, and the screenshots and reports from both the functionality and security testing phases. It shows not only my ability to write working code but also my understanding of how to write safe and secure code in a real-world context.
